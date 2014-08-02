@@ -26,7 +26,7 @@ task nativeToAscii << {
     println 'Platform native encoding = ' + System.getProperty('file.encoding')
     println 'Property file encoding = ' + encoding
     ant.native2ascii(src: "src/main/resources",
-            dest: "${processResources.destinationDir}",
+            dest: processResources.destinationDir,
             includes: '**/*.properties',
             encoding: encoding)
 }
